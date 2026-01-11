@@ -10,7 +10,7 @@
   tasks:
   - name: student information
     ansible.builtin.debug:
-      msg: "This is {{vinay}} studying {{course}} with roll no {{roll}}"
+      msg: "This is {{name}} studying {{course}} with roll no {{roll}}"
 
 
 
