@@ -2,12 +2,6 @@
   hosts: local
   connection: local
   become: yes
-  # vars_files:
-  # - variables.yaml
-  vars_prompt:
-    name: name
-    prompt: what is your name?
-    private: true
   vars:
     name: vinay
     course: bca
@@ -15,14 +9,6 @@
 
   tasks:
   - name: student information
-    # vars:
-    #   name: siva
     ansible.builtin.debug:
       msg: "This is {{name}} studying {{course}} with roll no {{roll}}"
 
-
-
-# playlevel variables done
-# task level variables done
-# cli arguments done
-# variables files done
