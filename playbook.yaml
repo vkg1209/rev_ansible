@@ -5,7 +5,7 @@
   vars:
     # name: vinay
     course: bca
-    roll: 31
+    # roll: 31
 
   tasks:
   - name: student information
