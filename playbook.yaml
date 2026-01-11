@@ -7,7 +7,7 @@
   tasks:
   - name: default
     ansible.builtin.debug:
-      msg: "salary | default(50000)"
+      msg: "{{salary | default(50000)}}"
   
   - name: string to list
     ansible.builtin.debug:
