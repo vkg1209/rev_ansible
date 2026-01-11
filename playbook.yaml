@@ -3,13 +3,19 @@
   connection: local
   become: yes
   vars:
-    technologies: html, css, javascript
+    tools:
+      frontend: html
+      backend: java
+    tools_arr:
+    - el1
+    - el2
+    - el3
   tasks:
-  - name: default
+  - name: dictionary to items
     ansible.builtin.debug:
-      msg: "{{salary | default(50000)}}"
+      msg: "{{tools | dict2items}}"
   
-  - name: string to list
+  - name: items to dictionary
     ansible.builtin.debug:
-      msg: "{{technologies | split(',')}}"
+      msg: "{{tools_arr | items2dict}}"
 
