@@ -11,8 +11,8 @@
 
   tasks:
   - name: student information
-    vars:
-      name: siva
+    # vars:
+    #   name: siva
     ansible.builtin.debug:
       msg: "This is {{name}} studying {{course}} with roll no {{roll}}"
 
