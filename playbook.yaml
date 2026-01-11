@@ -4,8 +4,10 @@
   become: yes
   vars:
     tools_arr:
-    - {frontend: html}
-    - {backend: java}
+    - key: frontend
+      value: html
+    - key: backend
+      value: java
   tasks:
   
   - name: items to dictionary
