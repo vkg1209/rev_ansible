@@ -3,7 +3,7 @@
   connection: local
   become: yes
   vars:
-    name: vinay
+    # name: vinay
     course: bca
     roll: 31
 
