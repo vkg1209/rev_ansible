@@ -3,7 +3,7 @@
   connection: local
   become: yes
   vars_files:
-    - variables.yaml
+  - variables.yaml
   vars:
     name: vinay
     course: bca
