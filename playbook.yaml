@@ -1,9 +1,15 @@
-- name: GATHERING FACTS
+- name: setting up system packages
   hosts: local
   connection: local
   become: yes
   tasks:
-  - name: Target Server Information
-    ansible.builtin.debug:
-      msg: "{{ansible_facts.python_version}}"
+  - name: Installing and Removing Packages
+    ansible.builtin.package:
+      name: "{{item.name}}"
+      state: "{{item.state}}"
+    loop:
+    - {name: nginx, state: latest}
+    - {name: git, state: latest}
+    - {name: mysql, state: latest}
+    - {name: nginx, state: absent}
 
