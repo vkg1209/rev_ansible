@@ -2,15 +2,9 @@
   hosts: local
   connection: local
   become: yes
-  vars:
-    tools_arr:
-    - key: frontend
-      value: html
-    - key: backend
-      value: java
   tasks:
   
   - name: items to dictionary
     ansible.builtin.debug:
-      msg: "{{tools_arr | items2dict}}"
+      msg: "192.168.1.0 | ansible.utils.ipv4"
 
