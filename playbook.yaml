@@ -1,14 +1,19 @@
-- name: variables
+- name: Verification
   hosts: local
   connection: local
   become: yes
-  vars:
-    # name: vinay
-    course: bca
-    # roll: 31
+  vars_promot:
+  - name: name
+    prompt: what is your name?
+    private: false
+    
+  - name: age
+    prompt: what is your age?
+    private: true
 
   tasks:
-  - name: student information
+  - name: Major or Minor Verification
     ansible.builtin.debug:
-      msg: "This is {{name}} studying {{course}} with roll no {{roll}}"
+      msg: "{{name}} is a MAJOR"
+    when: age | int >= 18
 
