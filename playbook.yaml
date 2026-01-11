@@ -1,0 +1,13 @@
+- name: variables
+  hosts: local
+  connection: local
+  become: root
+  vars:
+  - name: vinay
+  - course: bca
+  - roll: 31
+
+  tasks:
+  - name: student information
+    ansible.builtin.debug:
+      msg: "This is {{vinay}} studying {{course}} with roll no {{roll}}"
