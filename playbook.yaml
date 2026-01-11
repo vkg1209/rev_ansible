@@ -3,17 +3,10 @@
   connection: local
   become: yes
   vars:
-    tools:
-      frontend: html
-      backend: java
     tools_arr:
-    - el1
-    - el2
-    - el3
+    - "{{frontend: html}}"
+    - "{{backend: java}}"
   tasks:
-  - name: dictionary to items
-    ansible.builtin.debug:
-      msg: "{{tools | dict2items}}"
   
   - name: items to dictionary
     ansible.builtin.debug:
