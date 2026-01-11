@@ -5,5 +5,5 @@
   tasks:
   - name: Target Server Information
     ansible.builtin.debug:
-      msg: {{ansible_facts}}
+      msg: "{{ansible_facts}}"
 
