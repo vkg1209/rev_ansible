@@ -1,15 +1,15 @@
-- name: setting up system packages
+- name: Functions (fitlers)
   hosts: local
   connection: local
   become: yes
+  vars:
+    technologies: html, css, javascript
   tasks:
-  - name: Installing and Removing Packages
-    ansible.builtin.package:
-      name: "{{item.name}}"
-      state: "{{item.state}}"
-    loop:
-    - {name: nginx, state: latest}
-    - {name: git, state: latest}
-    - {name: mysql, state: latest}
-    - {name: nginx, state: absent}
+  - name: default
+    ansible.builtin.debug:
+      msg: "salary | default(50000)"
+  
+  - name: string to list
+    ansible.builtin.debug:
+      msg: "{{technologies | split(',')}}"
 
