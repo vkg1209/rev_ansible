@@ -2,6 +2,8 @@
   hosts: local
   connection: local
   become: yes
+  vars_files:
+    - variables.yaml
   vars:
     name: vinay
     course: bca
@@ -17,3 +19,5 @@
 
 
 # playlevel variables done
+# task level variables done
+# cli arguments done
