@@ -6,5 +6,5 @@
   
   - name: items to dictionary
     ansible.builtin.debug:
-      msg: "192.168.1.0 | ansible.utils.ipv4"
+      msg: "{{192.168.1.0 | ansible.utils.ipv4}}"
 
