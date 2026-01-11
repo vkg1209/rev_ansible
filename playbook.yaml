@@ -1,7 +1,7 @@
 - name: variables
   hosts: local
   connection: local
-  become: root
+  become: yes
   vars:
   - name: vinay
   - course: bca
@@ -11,3 +11,7 @@
   - name: student information
     ansible.builtin.debug:
       msg: "This is {{vinay}} studying {{course}} with roll no {{roll}}"
+
+
+
+# playlevel variables done
