@@ -3,9 +3,9 @@
   connection: local
   become: yes
   vars:
-  - name: vinay
-  - course: bca
-  - roll: 31
+    name: vinay
+    course: bca
+    roll: 31
 
   tasks:
   - name: student information
