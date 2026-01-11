@@ -4,6 +4,9 @@
   become: yes
   tasks:
   
+  - name: create user
+    ansible.builtin.command: useradd roboshop
+
   - name: items to dictionary
     ansible.builtin.command: id roboshop
     register: user_output
