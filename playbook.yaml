@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   become: yes
-  vars_promot:
+  vars_prompt:
   - name: name
     prompt: what is your name?
     private: false
