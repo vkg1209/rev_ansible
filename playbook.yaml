@@ -12,8 +12,13 @@
     private: true
 
   tasks:
-  - name: Major or Minor Verification
+  - name: Major Verification
     ansible.builtin.debug:
       msg: "{{name}} is a MAJOR"
     when: age | int >= 18
+
+  - name: Minor Verification
+    ansible.builtin.debug:
+      msg: "{{name}} is a MINOR"
+    when: age | int < 18
 
