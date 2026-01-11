@@ -5,6 +5,11 @@
   tasks:
   
   - name: items to dictionary
+    ansible.builtin.command: id roboshop
+    register: user_output
+    ignore_errors: true
+
+  - name: print user_output
     ansible.builtin.debug:
-      msg: "{{192.168.1.0 | ansible.utils.ipv4}}"
+      msg: "{{user_output}}"
 
