@@ -3,16 +3,6 @@
   connection: local
   become: yes
   tasks:
-  
-  - name: create user
-    ansible.builtin.command: useradd roboshop
-
-  - name: items to dictionary
-    ansible.builtin.command: id roboshop
-    register: user_output
-    ignore_errors: true
-
-  - name: print user_output
+  - name: print mysql password from vault
     ansible.builtin.debug:
-      msg: "{{user_output}}"
-
+      msg: "{{mysql_password}}"
