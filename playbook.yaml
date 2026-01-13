@@ -1,10 +1,9 @@
 - name: Functions (fitlers)
   hosts: local
   connection: local
-  become: yes
   vars_files:
   - variables.yaml
   tasks:
   - name: print mysql password from vault
     ansible.builtin.debug:
-      msg: {{mysql_password}}
+      msg: "{{mysql_password}}"
