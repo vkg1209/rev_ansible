@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars_files:
-  - variables.yaml
+  - mysql_password.yaml
   tasks:
   - name: print mysql password from vault
     ansible.builtin.debug:
