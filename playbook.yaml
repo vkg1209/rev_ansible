@@ -7,4 +7,4 @@
   tasks:
   - name: print mysql password from vault
     ansible.builtin.debug:
-      msg: "{{mysql_password}}"
+      msg: {{mysql_password}}
